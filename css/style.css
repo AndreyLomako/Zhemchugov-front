@@ -1,0 +1,1447 @@
+/* Обнуление */
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+/* --------------------------------- */
+/* стили для заголовков h1-h6 и нумерованных списков ul ol*/
+h1{
+	 font-weight: 300;
+	 font-size: 90px;
+	 line-height: 85px;
+    color: #000000;
+    margin-bottom: 29px;
+}
+h2{
+	 font-weight: 300;
+	 font-size: 65px;
+	 line-height: 65px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+h3,h4,h5,h6{
+    color: #000000;
+    margin-bottom: 30px;
+}
+h3{
+    font-size: 28px;
+    line-height: 40px;
+}
+h4{
+    font-size: 26px;
+    line-height: 40px;
+}
+h5{
+    font-size: 24px;
+    line-height: 32px;
+}
+h6{
+    font-size: 22px;
+    line-height: 32px;
+}
+ol{
+	 font-weight: 400;
+	 font-size: 25px;
+	 line-height: 38px;
+    color: #000000;
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+ul{
+	 font-weight: 400;
+	 font-size: 25px;
+	 line-height: 38px;
+    color: #000000;
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+ul li{
+    position: relative;
+}
+ul li::before{
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: -20px;
+    height: 10px;
+    width: 10px;
+    background: #1a4c98;
+    border-radius: 50%;
+    z-index: 2;
+}
+ol li{
+    position: relative;
+    list-style-type: none;
+}
+ol li::before{
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: -20px;
+    height: 10px;
+    width: 10px;
+    background: #1a4c98;
+    border-radius: 50%;
+    z-index: 2;
+}
+.title-font{
+	margin-bottom: 0px;
+}
+/*--------------------*/
+/* подключение шрифтов */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300&display=swap');
+@font-face {
+	font-family: 'AlegreyaSansSC';
+	src: local('alegreyasansscregular'),
+		  url('../fonts/alegreyasansscregular.ttf');
+	  font-weight: 400;
+ } 
+ @font-face {
+	font-family: 'AlegreyaSansSC';
+	src: local('alegreyasanssclight'),
+		  url('../fonts/alegreyasanssclight.ttf');
+	  font-weight: 300;
+ }
+  @font-face {
+	font-family: 'AlegreyaSansSC';
+	src: local('alegreyasansscmedium'),
+		  url('../fonts/alegreyasansscmedium.ttf');
+	  font-weight: 500;
+ }
+
+ @font-face {
+	font-family: 'Montserrat';
+	src: local('montserratlight'),
+		  url('../fonts/montserratlight.ttf');
+	  font-weight: 500;
+ }
+
+ @font-face {
+	font-family: 'GothamPro';
+	src: local('gothamproregular'),
+		  url('../fonts/gothamproregular.woff');
+	  font-weight: 400;
+ }
+ @font-face {
+	font-family: 'GothamPro';
+	src: local('gothamprolight'),
+		  url('../fonts/gothamprolight.woff');
+	  font-weight: 300;
+ }
+ @font-face {
+	font-family: 'GothamPro';
+	src: local('gothampromedium'),
+		  url('../fonts/gothampromedium.woff');
+	  font-weight: 500;
+ }
+/* ------------------- */
+/* кастомный ховер */
+.btn-hover-custom{
+	background: #443467;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
+.btn-hover-custom:before {
+	content:'';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.211);
+	border-radius: 5px;
+	transition: all 0.8s ease;
+	border-radius: 2px;
+}
+.btn-hover-custom:hover::before{
+	width: 100%;
+}
+/* -------------------- */
+/* Попап форма заказа*/
+/*container*/
+/*form*/
+/* .form-order-first-block{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.form-close-order,
+.form-close-callback{
+	color: #FFFFFF;
+	font-size: 20px;
+	cursor: pointer;
+}
+.form-order-title{
+	text-align: center;
+	color: #FFFFFF;
+	font-weight: 400;
+    font-size: 25px;
+    line-height: 35px;
+	margin-bottom: 10px;
+}
+.form-popup-order .form-order .form-order-group {
+    margin: 0 auto 0 auto;
+    padding: 4px;
+}
+.form-popup-order .form-order .form-order-group select,
+.form-popup-order .form-order .form-order-group .input-checkbox-name,
+.form-popup-order .form-order .form-order-group .input-checkbox{
+	cursor: pointer;
+}
+.form-popup-order .form-order .form-order-group label, 
+.form-popup-order .form-order .form-order-group p {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 8px; 
+	color: #FFFFFF;
+}
+.form-popup-order .form-order .form-order-group input,
+.form-popup-order .form-order .form-order-group select,
+.form-popup-order .form-order .form-order-group textarea {
+    font-size: 16px;
+    padding: 6px 12px;
+    color: #494949;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+.form-popup-order .form-order .form-order-group .form-control {
+    display: block;
+    width: 100%;
+    height: 38px;        
+}
+.form-popup-order .form-order .form-control:focus{
+    border-color: rgba(27,27,50,0.8);
+    box-shadow: 0 0 0 0.2rem rgba(27,27,50,0.25);
+}
+.form-popup-order .form-order .form-order-group .input-checkbox {
+    margin-right: 10px;
+    min-height: 20px;
+    min-width: 20px;
+}
+.form-popup-order .form-order .form-order-group .input-textarea {
+    width: 100%;
+    font-size: 1.07rem;
+    min-height: 120px;
+    padding: 0.625rem;
+    resize: vertical;
+}
+.form-popup-order .form-order .form-order-group .input-textarea:focus{
+	border-color: rgba(27,27,50,0.8);
+    box-shadow: 0 0 0 0.2rem rgba(27,27,50,0.25);
+}
+.form-popup-order .form-order .form-order-group .submit-button {
+    width: 100%;
+    padding: 12px;
+	background-color: #358f58;
+    color: #FFFFFF;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color .15s ease;
+    font-size: 18px;
+    font-weight: 400;
+}
+.form-popup-order {
+	position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+	z-index: 4;
+}
+.form-order {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	background-color: rgba(49, 49, 71, 0.8);
+	max-width: 550px;
+	width: 100%;
+	border-radius: 10px;
+	padding: 40px;
+	z-index: 5;
+}
+.show-modal-order {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+} */
+/* Конец важной части */
+/* -------------------- */
+
+
+/* попап форма обратного звонка */
+/*container*/
+/*form*/
+ .form-first-block{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.form-close-callback{
+	color: #FFFFFF;
+	font-size: 25px;
+	cursor: pointer;
+}
+.form-callback-title{
+	text-align: center;
+	color: #FFFFFF;
+	font-weight: 400;
+    font-size: 25px;
+    line-height: 35px;
+	margin-bottom: 10px;
+}
+.form-popup-callback .form-callback .form-callback-group {
+    margin: 0 auto 0 auto;
+    padding: 10px;
+}
+.form-popup-callback .form-callback .form-callback-group label, 
+.form-popup-callback .form-callback .form-callback-group p {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 8px; 
+	color: #FFFFFF;
+}
+.form-popup-callback .form-callback .check-politic p{
+	display: block;
+	font-size: 14px;
+}
+.form-popup-callback .form-callback .check-politic{
+	display: flex;
+	align-items: center;
+}
+.form-popup-callback .form-callback .form-callback-group input {
+    font-size: 16px;
+    padding: 6px 12px;
+    color: #494949;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+.form-popup-callback .form-callback .form-callback-group .form-control {
+    display: block;
+    width: 100%;
+    height: 38px;        
+}
+.form-popup-callback .form-callback .form-control:focus{
+    border-color: rgba(27,27,50,0.8);
+    box-shadow: 0 0 0 0.2rem rgba(27,27,50,0.25);
+} 
+.form-popup-callback .form-callback .form-callback-group .input-checkbox {
+    margin-right: 10px;
+    min-height: 20px;
+    min-width: 20px;
+	cursor: pointer;
+}
+.form-popup-callback .form-callback .form-callback-group .submit-button {
+    width: 100%;
+    padding: 12px;
+	background-color: #358f58;
+    color: #FFFFFF;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color .15s ease;
+    font-size: 18px;
+    font-weight: 400;
+}
+.form-popup-callback {
+	position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+	z-index: 100;
+}
+.form-callback {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	background-color: rgba(49, 49, 71, 0.8);
+	max-width: 500px;
+	width: 100%;
+	border-radius: 10px;
+	padding: 40px;
+	z-index: 5;
+}
+.show-modal-callback {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+.link-politic{
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+/* ----------------------------- */
+.menu-burger-hidden-items{
+	margin: 0;
+	z-index: 2;
+}
+.menu-burger-hidden{
+	z-index: 2;
+}
+.wedding-costume-container{
+	max-width: 1590px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.wedding-costume {
+	font-family: 'GothamPro', sans-serif;
+	overflow: hidden;
+}
+.costume-three-title-block {
+	display: flex;
+	flex-direction: column;
+	background-image: url("../img/title-block/man-title.jpg");
+	background-repeat: no-repeat;
+	width: 100%;
+	background-position: right top;
+	padding-bottom: 186px;
+}
+.costume-three-head-block {
+	display: flex;
+	justify-content: space-between;
+	gap: 5px;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-bottom: 60px;
+	padding: 40px 60px 40px 66px;
+	position: relative;
+}
+.costume-three-head-block-burger-menu {
+	display: flex;
+	gap: 12px;
+	height: 24px;
+}
+#burger-menu {
+	cursor: pointer;
+	height: 24px;
+	width: 27px;
+	overflow: visible;
+	position: relative;
+	z-index:4;
+ }
+ #burger-menu span,
+ #burger-menu span:before,
+ #burger-menu span:after {
+	background: #4D3C75;
+	display: block;
+	height: 2px;
+	opacity: 1;
+	position: absolute;
+	transition: 0.3s ease-in-out;
+ }
+ #burger-menu span:before,
+ #burger-menu span:after {
+	content: "";
+ }
+ #burger-menu span {
+	right: 0px;
+	top: 11px;
+	width: 27px;
+ }
+ #burger-menu span:before {
+	left: 0px;
+	top: -10px;
+	width: 27px;
+ }
+ #burger-menu span:after {
+	left: 0px;
+	top: 10px;
+	width: 27px;
+ }
+ #burger-menu.close span {
+	transform: rotate(-45deg);
+	top: 13px;
+	width: 27px;
+	background: #FFFFFF;
+ }
+ #burger-menu.close span:before {
+	top: 0px;
+	transform: rotate(90deg);
+	width: 27px;
+	background: #FFFFFF;
+ }
+ #burger-menu.close span:after {
+	top: 0px;
+	left:0;
+	transform: rotate(90deg);
+	opacity:0;
+	width:0;
+ }
+ #menu-burger-hidden{
+	z-index:3;
+	min-width:100%;
+	min-height:100%;
+	position: fixed;
+	top:0;
+	left: 0;
+	height:0;
+	visibility: hidden;
+	opacity: 0;
+	text-align:center;
+	padding-top:20px;
+	transition: all 0.3s ease-in-out;
+ }
+ #menu-burger-hidden.overlay{
+	visibility: visible;
+	opacity: 1;
+	padding-top:100px;
+	background:rgba(0,0,0,0.85);
+ }
+ #menu-burger-hidden .menu-burger-hidden-item{
+	list-style:none;
+	display: flex;
+	justify-content: center;
+ }
+ .menu-burger-hidden-item::before{
+	display: none;
+ }
+ #menu-burger-hidden a{
+	color:#fff;
+	display:inline-flex;
+	flex-direction: column;
+	font-size: 32px;
+	margin-bottom:30px;
+	text-decoration:none;
+ }
+.costume-three-head-block-menu-border{
+	display: flex;
+	flex-direction: column;
+	gap: 11px;
+}
+.costume-three-head-block-menu{
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 18px;
+	color: #4D3C75;
+}
+.costume-three-head-block-logo {
+	position: absolute;
+	top: 25px;
+	left: calc(55% - 185px);
+}
+.costume-three-head-block-phone {
+	font-weight: 400;
+	font-size: 25px;
+	line-height: 35px;
+	color: #000000;
+}
+.costume-three-middle-block {
+	padding-left: 180px;
+}
+.costume-three-middle-block-title {
+	font-weight: 300;
+	font-size: 90px;
+	line-height: 85px;
+	max-width: 814px;
+	font-family: 'AlegreyaSansSC', sans-serif;
+	margin-bottom: 29px;
+}
+.costume-three-middle-block-price {
+	font-weight: 400;
+	font-size: 81.5772px;
+	line-height: 82px;
+	color: #584386;
+	display: flex;
+	gap: 13px;
+	margin-bottom: 167px;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 1.4px;
+}
+.costume-three-middle-block-price br{
+	display: none;
+}
+.costume-three-middle-block-btn {
+	border-radius: 2px;
+	max-width: 272px;
+	height: 88px;
+}
+.btn-costume-color{
+	font-weight: 400;
+	font-size: 25px;
+	line-height: 35px;
+	color: #FFFFFF;
+	font-family: 'AlegreyaSansSC', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/* ------------------------- */
+.wedding-costume-tailoring {
+	position: relative;
+	max-width: 1940px;
+	margin: 0 auto 41px auto;
+}
+.tailoring-block {
+	display: flex;
+	justify-content: space-between;
+}
+.tailoring-left-content {
+	padding-left: 89px;
+	padding-top: 98px;	
+}
+.tailoring-left-content-img img{
+	width: 100%;
+	max-width: 394px;
+}
+.tailoring-left-content-img {
+	transform: translate(-140%, 0px);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+.tailoring-left-content-img._active{
+	transform: translate(0px, 0px);
+	opacity: 1;
+	position: relative;
+}
+.tailoring-left-content-text {
+	position: absolute;
+	top: 57%;
+	left: 0;
+	background: #282B31;
+	border-radius: 0px 40px 0px 0px;
+	padding: 71px 98px 74px 180px;
+	max-width: 960px;
+	font-weight: 400;
+	font-size: 25px;
+	line-height: 38px;
+	color: #FFFFFF;
+	z-index: 2;
+}
+.tailoring-right-content {
+	padding-right: 240px;
+	padding-top: 125px;
+}
+.tailoring-right-content-title {
+	font-weight: 300;
+	font-size: 65px;
+	line-height: 65px;
+	font-family: 'AlegreyaSansSC', sans-serif;
+	margin-bottom: 54px;
+}
+.tailoring-right-content-img img{
+	width: 100%;
+	max-width: 600px;
+}
+.tailoring-right-content-img {
+	transform: translate(140%, 0px);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+.tailoring-right-content-img._active{
+	transform: translate(0px, 0px);
+	opacity: 1;
+}
+/* ---------------------------------- */
+.wedding-costume-advantages {
+	background: url("../img/advantages/bg.png") no-repeat;
+	width: 100%;
+	height: 100%;
+	max-width: 1940px;
+	margin: 0 auto;
+	padding-top: 141px;
+}
+.advantages-block {
+	position: relative;
+}
+.advantages-items {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.advantages-item {
+	max-width: 530px;
+	border-radius: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	z-index: 2;
+}
+.advantages-item:nth-child(1){
+	align-self: flex-start;
+	padding-left: 180px;
+}
+.advantages-item:nth-child(2){
+	align-self: flex-end;
+	margin-bottom: 111px;
+	padding-right: 90px;
+}
+.advantages-item:nth-child(3){
+	align-self: flex-start;
+	margin-bottom: 155px;
+	padding-left: 60px;
+}
+.advantages-item:nth-child(4){
+	align-self: flex-end;
+	padding-right: 38px;
+}
+.advantages-item span{
+	font-weight: 300;
+	font-size: 70px;
+	line-height: 70px;
+	color: #C17B6F;
+}
+.advantages-item span span{
+    font-size: 55px;
+    line-height: 40px;
+}
+.advantages-item p,
+.advantages-item-bg span{
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 40px;
+	font-family: 'AlegreyaSansSC', sans-serif;
+}
+.advantages-item-bg {
+	display: flex;
+	flex-direction: column;
+	gap: 36px; 
+	max-width: 486px;
+	transition: all 0.3s ease 0s;
+	border-radius: 50%;
+	background: rgb(52, 46, 78, 0.12);
+	padding: 140px 49px 155px 118px;
+	margin-bottom: 65px;
+	z-index: 2;
+	transform: translate(0px, -47px);
+}
+.advantages-item-bg-link {
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 35px;
+	color: #584386;
+	position: relative;
+	max-width: 231px;
+	transition: all 0.3s ease 0s;
+}
+.advantages-item-bg-link:hover{
+	opacity: .9;
+	color: #6b43c0;
+}
+.advantages-item-bg-link::before{
+	content: "";
+	position: absolute;
+	top: 10px;
+	right: -25px;
+	background: url("../img/advantages/ArrowRight.svg") no-repeat;
+	width: 16px;
+	height: 16px;
+}
+.advantages-costume-img {
+	position: absolute;
+	top: 25px;
+	left: calc(50% - 372px);
+}
+/* ------------------------------ */
+.wedding-costume-services{
+	background: url("../img/services/mans-img.jpg") no-repeat;
+	padding-bottom: 10px;
+	max-width: 1940px;
+	margin: 0 auto 119px auto;
+}
+.costume-services-block{
+	display: flex;
+	justify-content: flex-end;
+}
+.costume-services-content {
+	padding: 81px 61px 74px 62px;
+	background: #252732;
+	border-radius: 20px 20px 20px 0px;
+	max-width: 663px;
+	position: relative;
+	transform: translate(0px, -95px);
+	overflow: hidden;
+}
+.costume-services-content::after{
+	content: "";
+	position: absolute;
+    bottom: -175px;
+    right: -105px;
+	background: url("../img/services/services-devor.png") no-repeat;
+	width: 290px;
+	height: 290px;
+}
+.costume-services-title {
+	font-weight: 400;
+	font-size: 60px;
+	line-height: 65px;
+	color: #E0A297;
+	margin-bottom: 48px;
+}
+.costume-services-text {
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 35px;
+	color: #FFFFFF;
+	opacity: 0.8;
+	margin-bottom: 172px;
+}
+.costume-services-text p:not(:last-child){
+	margin-bottom: 40px;
+}
+.costume-services-btn {
+	max-width: 332px;
+	height: 81px;
+	border: 1px solid rgba(255, 255, 255, 0.26);
+	border-radius: 2px;
+}
+/* ------------------------- */
+.wedding-costume-better {
+	max-width: 1940px;
+	margin: 0 auto 175px auto;
+}
+.better-title {
+	font-weight: 300;
+	font-size: 65px;
+	line-height: 70px;
+	font-family: 'AlegreyaSansSC', sans-serif;
+	margin-bottom: 55px;
+	max-width: 785px;
+	letter-spacing: -0.5px;
+}
+.better-items {
+	display: flex;
+	gap: 36px;
+	flex-wrap: wrap;
+}
+.better-item {
+	border: 1px solid #E0A297;
+	border-radius: 2px;
+	max-width: 496px;
+	padding: 40px 38px;
+	position: relative;
+}
+.better-item::before{
+	content: "";
+	position: absolute;
+	top: 30px;
+	left: 0;
+	background: #E0A297;
+	border-radius: 0px 5px 5px 0px;
+	height: 41px;
+	width: 7px;
+}
+.better-item-title {
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 24px;
+	color: #C17B6F;
+	font-family: 'AlegreyaSansSC', sans-serif;
+	margin-bottom: 37px;
+}
+.better-item-text {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 26px;
+}
+.better-item-bg {
+	background: rgb(58, 42, 92);
+	border-radius: 2px;
+	position: relative;
+	max-width: 496px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+	cursor: pointer;
+	overflow: hidden;
+}
+.better-item-bg:hover::before{
+	transform: scale(1.2);
+}
+.better-item-bg::before{
+	content: "";
+	background: url("../img/better/img-bg-card.png") no-repeat;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	z-index: -1;
+	transition: all 0.3s ease 0s;
+}
+.better-item-bg-content{
+	border: 1px solid #FFFFFF;
+	margin: 20px;
+	position: relative;
+}
+.better-item-bg-content::before{
+	content: "";
+	position: absolute;
+	top: 90px;
+	right: 45px;
+	background: url("../img/better/arrow.svg") no-repeat;
+	background-size: contain;
+	width: 12px;
+	height: 24px;
+}
+.better-item-bg-text {
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 32px;
+	font-family: 'AlegreyaSansSC', sans-serif;
+	color: #FFFFFF;
+	padding: 71px 136px 70px 34px;
+}
+/* ------------------------------------- */
+.wedding-costume-offer {
+	max-width: 1940px;
+	margin: 0px auto 127px auto;
+}
+.offer-title {
+	font-weight: 300;
+	font-size: 80px;
+	line-height: 80px;
+	font-family: 'AlegreyaSansSC', sans-serif;
+	margin-bottom: 44px;
+	letter-spacing: 1px;
+}
+.offer-content {
+	display: flex;
+	gap: 40px;
+	flex-wrap: wrap;
+}
+.offer-items {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	transition: all 0.3s ease 0s;
+}
+.offer-item {
+	cursor: pointer;
+	transition: all 0.5s ease 0s;
+}
+.offer-item:hover .offer-img{
+	transform: scale(0.98);
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.offer-img {
+	transition: all 0.3s ease 0s;
+	margin-bottom: 18px;
+}
+.offer-sub-title {
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 35px;
+	color: #442F72;
+	position: relative;
+	display: inline;
+}
+.offer-sub-title::before{
+	content: "";
+	position: absolute;
+	top: 4px;
+    right: -27px;
+	background: url("../img/offer/ArrowRight.svg") no-repeat;
+	width: 16px;
+	height: 16px;
+	background-size: contain;
+}
+/* правая часть */
+.offer-items:nth-child(3) .offer-item:nth-child(1){
+	transform: translate(300%, 0px);
+	opacity: 0;
+}
+.offer-items:nth-child(3) .offer-item._active:nth-child(1){
+	transform: translate(0px, 0px);
+	opacity: 1;
+}
+.offer-items:nth-child(3) .offer-item:nth-child(2){
+	transform: translate(300%, 0px);
+	opacity: 0;
+}
+.offer-items:nth-child(3) .offer-item._active:nth-child(2){
+	transform: translate(0px, 0px);
+	opacity: 1;
+	transition-delay: 0.2s;
+}
+.offer-items:nth-child(4) .offer-item:nth-child(1){
+	transform: translate(300%, 0px);
+	opacity: 0;
+}
+.offer-items:nth-child(4) .offer-item._active:nth-child(1){
+	transform: translate(0px, 0px);
+	opacity: 1;
+	transition-delay: 0.3s;
+}
+.offer-items:nth-child(4) .offer-item:nth-child(2){
+	transform: translate(300%, 0px);
+	opacity: 0;
+}
+.offer-items:nth-child(4) .offer-item._active:nth-child(2){
+	transform: translate(0px, 0px);
+	opacity: 1;
+	transition-delay: 0.4s;
+}
+/* -------------------- */
+/* левая часть */
+.offer-items:nth-child(2) .offer-item:nth-child(1){
+	transform: translate(-300%, 0px);
+	opacity: 0;
+}
+.offer-items:nth-child(2) .offer-item._active:nth-child(1){
+	transform: translate(0px, 0px);
+	opacity: 1;
+}
+.offer-items:nth-child(2) .offer-item:nth-child(2){
+	transform: translate(-300%, 0px);
+	opacity: 0;
+}
+.offer-items:nth-child(2) .offer-item._active:nth-child(2){
+	transform: translate(0px, 0px);
+	opacity: 1;
+	transition-delay: 0.2s;
+}
+.offer-items:nth-child(1) .offer-item:nth-child(1){
+	transform: translate(-300%, 0px);
+	opacity: 0;
+}
+.offer-items:nth-child(1) .offer-item._active:nth-child(1){
+	transform: translate(0px, 0px);
+	opacity: 1;
+	transition-delay: 0.3s;
+}
+.offer-items:nth-child(1) .offer-item:nth-child(2){
+	transform: translate(-300%, 0px);
+	opacity: 0;
+}
+.offer-items:nth-child(1) .offer-item._active:nth-child(2){
+	transform: translate(0px, 0px);
+	opacity: 1;
+	transition-delay: 0.4s;
+}
+/* -------------------- */
+.wedding-costume-portfolio {
+	background: url("../img/portfolio/portfolio-bg.png") no-repeat;
+	max-width: 1940px;
+	margin: 0 auto;
+	padding-bottom: 165px;
+}
+.wedding-costume-portfolio .wedding-costume-container{
+	position: relative;
+}
+.portfolio-content{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 5px;
+}
+/* стрелки слайдера */
+.portfolio-content .swiper-button-prev{
+	background: url("../img/portfolio/arrow-left.svg") no-repeat;
+	width: 72px;
+	height: 72px;
+}
+.portfolio-content .swiper-button-prev:hover{
+	opacity: .8;
+}
+.portfolio-content .swiper-button-next{
+	background: url("../img/portfolio/arrow-right.svg");
+	width: 72px;
+	height: 72px;
+}
+.portfolio-content .swiper-button-next:hover{
+	opacity: .8;
+}
+.portfolio-content .swiper-button-next, .swiper-button-prev{
+	position: static;
+	margin: 0;
+	display: block;
+}
+.portfolio-btn{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 15px;
+}
+/* ------------------------ */
+.portfolio-title {
+	font-weight: 300;
+	font-size: 80px;
+	line-height: 80px;
+	color: #FFFFFF;
+	font-family: 'AlegreyaSansSC', sans-serif;
+	padding-top: 110px;
+	margin-bottom: 101px;
+}
+.portfolio-item-info-block{
+	padding: 10px;
+	background: #F4F4F4;
+}
+.portfolio-item-name{
+	font-size: 16px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+.portfolio-item-price{
+	font-size: 20px;
+	font-weight: 500;
+	text-align: center;
+}
+/* пагинация */
+.wedding-costume-portfolio .swiper-pagination-bullet{
+	background: url("../img/portfolio/pagination-static.svg") no-repeat;
+	width: 12px;
+	height: 12px;
+	background-size: contain;
+	opacity: 1;
+}
+.wedding-costume-portfolio .swiper-pagination-bullet-active{
+	background: url("../img/portfolio/pagination-active.svg") no-repeat;
+	width: 13px;
+	height: 13px;
+	background-size: contain;
+	opacity: 1;
+}
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:not(:last-child) {
+	margin: 0 16px 0 0;
+}
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+	margin: 0;
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+	bottom: -67px;
+	left: -17px;
+}
+/* -------------------- */
+.wedding-costume-elite {
+	max-width: 1940px;
+	margin: 0 auto 103px auto;
+}
+.elite-block {
+	display: flex;
+	gap: 119px;
+	flex-wrap: wrap;
+}
+.elite-block-left {
+	position: relative;
+}
+.elite-block-left-img-absolute {
+	position: absolute;
+	bottom: 0;
+	right: -180px;
+}
+.elite-block-right {
+	display: flex;
+	flex-direction: column;
+}
+.elite-block-right-title {
+	font-weight: 300;
+	font-size: 80px;
+	line-height: 80px;
+	font-family: 'AlegreyaSansSC', sans-serif;
+	margin-bottom: 26px;
+	padding-top: 68px;
+}
+.elite-block-right-text {
+	font-weight: 400;
+	font-size: 25px;
+	line-height: 38px;
+	max-width: 781px;
+	margin-bottom: 105px;
+}
+.elite-block-right-img {
+	transform: translate(120px, 0px);
+}
+/* ----------------------- */
+.wedding-costume-client {
+	background: url("../img/client/client-bg.png") no-repeat;
+	background-position: 100% 99%;
+	padding-bottom: 163px;
+	max-width: 1940px;
+	margin: 0 auto 148px auto;
+}
+.client-title {
+	font-weight: 300;
+	font-size: 80px;
+	line-height: 80px;
+	font-family: 'AlegreyaSansSC', sans-serif;
+	margin-bottom: 84px;
+}
+.client-items {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 77px;
+	margin-bottom: 102px;
+}
+.client-item:nth-child(2){
+	transform: translate(0px, 54px);
+}
+.client-item:nth-child(3){
+	transform: translate(0px, -28px);
+}
+.client-item:nth-child(4){
+	transform: translate(0px, 17px);
+}
+.client-sub-title {
+	font-weight: 300;
+	font-size: 60px;
+	line-height: 60px;
+	color: #FFFFFF;
+	font-family: 'AlegreyaSansSC', sans-serif;
+	margin-bottom: 62px;
+	letter-spacing: 0.5px;
+}
+.client-bottom-block {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.client-bottom-block-text {
+	font-weight: 400;
+	font-size: 25px;
+	line-height: 38px;
+	color: #FFFFFF;
+	max-width: 765px;
+	padding-left: 10px;
+}
+.client-bottom-block-btn {
+	max-width: 533px;
+	width: 100%;
+	height: 81px;
+	letter-spacing: 0.5px;
+}
+/* --------------------------- */
+.wedding-costume-reviews {
+	max-width: 1940px;
+	margin: 0 auto 179px auto;
+}
+.reviews-content {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	align-items: center;
+	margin-bottom: 56px;
+}
+.reviews-title {
+	font-weight: 300;
+	font-size: 80px;
+	line-height: 80px;
+	font-family: 'AlegreyaSansSC', sans-serif;
+}
+.reviews-position{
+	padding-left: 180px;
+}
+.reviews-item {
+	position: relative;
+	padding: 40px 40px 40px 104px;
+	background: #F4F4F4;
+	border-radius: 2px;
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	min-height: 340px;
+}
+.reviews-item::before{
+	content: "";
+	background: url("../img/reviews/bookmark.svg") no-repeat;
+	position: absolute;
+	top: 40px;
+	left: 40px;
+	width: 48px;
+	height: 39px;
+}
+.reviews-item-text {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 26px;
+	flex-grow: 1;
+}
+.reviews-item-author {
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 28px;
+	color: #6C6C6C;
+	font-family: 'AlegreyaSansSC', sans-serif;
+	text-align: end;
+}
+/* стрелки для отзывов */
+.reviews-content .swiper-button-prev{
+	background: url("../img/portfolio/arrow-left.svg") no-repeat;
+	width: 72px;
+	height: 72px;
+}
+.reviews-content .swiper-button-prev:hover{
+	opacity: .8;
+}
+.reviews-content .swiper-button-next{
+	background: url("../img/portfolio/arrow-right.svg");
+	width: 72px;
+	height: 72px;
+}
+.reviews-content .swiper-button-next:hover{
+	opacity: .8;
+}
+.reviews-content .swiper-button-next, .swiper-button-prev{
+	position: static;
+	margin: 0;
+	display: block;
+}
+.reviews-btn{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/* ------------------------------ */
+.wedding-costume-map {
+	max-width: 1940px;
+	margin: 0 auto 0 auto;
+	position: relative;
+}
+.map-title {
+	font-weight: 300;
+	font-size: 80px;
+	line-height: 80px;
+	font-family: 'AlegreyaSansSC', sans-serif;
+	margin-bottom: 98px;
+	letter-spacing: 1px;
+}
+.map-content{
+	height: 756px;
+}
+.map-info-block {
+	position: absolute;
+	top: 0;
+	right: 294px;
+	padding: 25px 62px 68px 62px;
+	background: #252732;
+}
+.map-info-block-logo{
+	display: block;
+	text-align: center;
+	margin-bottom: 47px;
+}
+.map-info-block-item {
+	width: 100%;
+	position: relative;
+}
+.map-info-block-items{
+	margin-bottom: 58px;
+}
+.map-info-block-item:not(:last-child)::before{
+	content: "";
+	background: #5E5D5D;
+	height: 1px;
+	width: 100%;
+	position: absolute;
+	bottom: -24px;
+	right: 0;
+}
+.map-info-block-item:last-child::before{
+	display: none;
+}
+.map-info-block-item:not(:last-child){
+	margin-bottom: 48px;
+}
+.map-info-block-title {
+	font-family: 'AlegreyaSansSC', sans-serif;
+	font-weight: 500;
+	font-size: 23px;
+	line-height: 28px;
+	color: #FFFFFF;
+}
+.map-info-block-sub-title {
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 26px;
+	color: #FFFFFF;
+}
+.map-info-block-btn {
+	width: 360px;
+	height: 76px;
+}
+.form-popup-callback .form-callback-group.response {
+    display: none;
+    text-align: center;
+    font-size: 18px;
+	line-height: 1.25em;
+    margin: 10px;
+}
+.form-popup-callback .form-callback-group.response.success {
+    display: block;
+    background-color: #7ce0a3;
+}
+.form-popup-callback .form-callback-group.response.error {
+    display: block;
+    color: #fff;
+    background-color: #d14c4c;
+}
+.form-popup-callback .form-callback-group.response.info {
+    display: block;
+    background-color: #d1be4c;
+}
+.phone-block .social-items{
+	text-align: center;
+}
+.social-item img{
+	max-width: 40px;
+}
+.social-item:not(:last-child){
+	margin-right: 15px;
+}
+.social-item{
+	transition: all 0.3s ease 0s;
+}
+.social-item:hover{
+	opacity: .8;
+}
+.phone-block{
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+body.over{
+	overflow: hidden;
+}

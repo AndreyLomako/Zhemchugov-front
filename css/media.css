@@ -1,0 +1,938 @@
+
+@media screen and (max-width: 1200px) {
+	.wedding-costume-container{
+		 max-width: 991px;
+	}
+}
+/* стили для больших планшетов - начало */
+@media screen and (max-width: 991px) {
+	.wedding-costume-container{
+		 max-width: 767px;
+	}
+}
+/* стили для средних планшетов - начало */
+@media screen and (max-width: 767px) {
+	.wedding-costume-container{
+		 max-width: none;
+	}
+}
+/* ------------------ */
+@media screen and (min-width: 1921px) {
+	.costume-three-head-block-menu{
+		line-height: 22px;
+	}
+}
+@media screen and (max-width: 1919px) {
+	.wedding-costume-advantages{
+		background-position: center;
+	}
+}
+@media screen and (max-width: 1600px) {
+	.costume-three-middle-block-title{
+		font-size: 65px;
+		line-height: 65px;
+		max-width: 600px;
+	}
+	.costume-three-middle-block-price{
+		font-size: 60px;
+		line-height: 62px;
+	}
+}
+@media screen and (min-width: 1590px) {
+	.better-item-bg{
+		transition: all 0.5s ease 0s;
+		transform: translate(140%, 0px);
+		opacity: 0;
+	}
+	.better-item-bg._active{
+		transform: translate(0px, 0px);
+		transition-delay: 0.3s;
+		opacity: 1;
+	}
+	.better-item{
+		transition: all 0.5s ease 0s;
+	}
+	.better-item:nth-child(1){
+		transform: translate(-140%, 0px);
+		opacity: 0;
+	}
+	.better-item._active:nth-child(1){
+		transform: translate(0px, 0px);
+		opacity: 1;
+	}
+	.better-item:nth-child(3){
+		transform: translate(140%, 0px);
+		opacity: 0;
+	}
+	.better-item._active:nth-child(3){
+		transform: translate(0px, 0px);
+		opacity: 1;
+	}
+	.better-item:nth-child(4){
+		transform: translate(-140%, 0px);
+		opacity: 0;
+	}
+	.better-item._active:nth-child(4){
+		transform: translate(0px, 0px);
+		transition-delay: 0.3s;
+		opacity: 1;
+	}
+}
+@media screen and (max-width: 1590px) {
+	.wedding-costume-container{
+		max-width: 1200px;
+	}
+	.tailoring-right-content{
+		padding-right: 0px;
+	}
+	.tailoring-left-content{
+		padding-left: 0px;
+	}
+	.tailoring-left-content-text{
+		padding: 61px 50px 64px 100px;
+		max-width: 850px;
+	}
+	.wedding-costume-advantages .wedding-costume-container{
+		max-width: none;
+	}
+	.advantages-costume-img img{
+		height: 887px;
+	}
+	.advantages-costume-img{
+		left: calc(58% - 372px);
+	}
+	.costume-services-content {
+		padding: 40px;
+		max-width: 550px;
+	}
+	.costume-services-text{
+		margin-bottom: 100px;
+	}
+	.wedding-costume-services .wedding-costume-container{
+		max-width: none;
+	}
+	.better-items{
+		justify-content: center;
+	}
+	.offer-items:nth-child(4){
+		flex-direction: row;
+	}
+	.elite-block-right-img {
+		transform: translate(0px, 0px);
+	}
+	.elite-block{
+		gap: 30px;
+	}
+	.elite-block-left img{
+		max-width: 400px;
+	}
+	.elite-block-right-img img{
+		max-width: 500px;
+	}
+	.elite-block-left-img-absolute img{
+		max-width: 300px;
+	}
+	.elite-block-right-text{
+		max-width: 500px;
+	}
+	.elite-block{
+		justify-content: space-between;
+	}
+	.elite-block-left-img-absolute {
+		bottom: 100px;
+   		right: -135px;
+	}
+	.elite-block-right-text{
+		margin-bottom: 50px;
+	}
+	.client-item img{
+		max-width: 270px;
+	}
+	.client-items{
+		gap: 30px;
+		margin-bottom: 70px;
+	}
+	.wedding-costume-client{
+		background-position: 100% 100%;
+		padding-bottom: 20px;
+	}
+	.client-bottom-block{
+		gap: 10px;
+	}
+	.reviews-position{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.map-info-block{
+		right: 105px;
+	}
+	.reviews-item-text{
+		font-size: 16px;
+		line-height: 22px;
+		margin-bottom: 10px;
+	}
+	.reviews-item{
+		min-height: auto;
+	}
+	.portfolio-item-info-block{
+		max-width: 360px;
+	}
+}
+@media screen and (max-width: 1400px) {
+	.costume-three-title-block{
+		background-position: center top;
+	}
+	.map-info-block{
+		padding: 25px 45px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.map-info-block-btn{
+		width: 250px;
+	}
+	.map-info-block-logo,
+	.map-info-block-items{
+		margin-bottom: 30px;
+	}
+	.map-info-block-item:not(:last-child){
+		margin-bottom: 30px;
+	}
+	.map-info-block{
+		top: 140px;
+	}
+	.map-title{
+		margin-bottom: 60px;
+	}
+}
+@media screen and (max-width: 1300px) {
+	.advantages-item:nth-child(1){
+		padding-left: 0px;
+	}
+	.advantages-item:nth-child(2){
+		padding-right: 0px;
+	}
+	.advantages-item:nth-child(3){
+		padding-left: 0px;
+	}
+	.advantages-item:nth-child(4){
+		padding-right: 0px;
+	}
+	.reviews-item{
+		padding: 30px 30px 30px 94px;
+	}
+	.reviews-item::before {
+		height: 30px;
+		width: 30px;
+		background-size: contain;
+		top: 35px;
+		left: 15px;
+	}
+}
+@media screen and (max-width: 1200px) {
+	.wedding-costume-container{
+		max-width: 991px;
+	}
+	.costume-three-middle-block{
+		padding-left: 66px;
+	}
+	.tailoring-right-content{
+		max-width: 400px;
+	}
+	.tailoring-left-content-text{
+		padding: 60px 30px 60px 60px;
+		max-width: 750px;
+	}
+	.advantages-item p, .advantages-item-bg span{
+		font-size: 20px;
+		line-height: 30px;
+	}
+	.advantages-item-bg{
+		transform: translate(0px, 0px);
+	}
+	.advantages-item span{
+		font-size: 40px;
+		line-height: 40px;
+	}
+	.advantages-item span span{
+		font-size: 30px;
+		line-height: 30px;
+	}
+	.advantages-item-bg-link{
+		font-size: 20px;
+		line-height: 30px;
+	}
+	.wedding-costume-advantages {
+		background-size: cover;
+	}
+	.advantages-costume-img img {
+		height: 715px;
+	}
+	.advantages-costume-img{
+		left: calc(64% - 372px);
+	}
+	.better-item{
+		padding: 20px;
+		max-width: 350px;
+	}
+	.better-item-bg{
+		max-width: 350px;
+	}
+	.better-item-text,
+	.better-item-bg-text{
+		font-size: 16px;
+		line-height: 22px;
+	}
+	.better-item-bg-text{
+		padding: 30px 50px 30px 50px;
+	}
+	.better-item-bg-content::before {
+		top: 40px;
+	}
+	.wedding-costume-better{
+		margin: 0 auto 100px auto;
+	}
+	.offer-items:nth-child(4){
+		flex-direction: column;
+	}
+	.offer-content{
+		justify-content: center;
+	}
+	.wedding-costume-portfolio{
+		padding-bottom: 100px;
+	}
+	.elite-block-right-title{
+		padding-top: 0px;
+	}
+	.elite-block-right-text{
+		margin-bottom: 35px;
+		font-size: 22px;
+	}
+	.elite-block-left-img-absolute{
+		display: none;
+	}
+	.client-item img{
+		max-width: 225px;
+	}
+	.client-items{
+		gap: 15px;
+	}
+	.client-sub-title{
+		margin-bottom: 30px;
+	}
+	.wedding-costume-reviews {
+		margin: 0 auto 100px auto;
+	}
+}
+@media screen and (max-width: 991px) {
+	.wedding-costume-container{
+		max-width: 767px;
+	}
+	.costume-three-middle-block{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.costume-three-head-block{
+		padding: 35px 15px 35px 15px;
+	}
+	.costume-three-title-block{
+		background-image: url("../img/title-block/man-title-mobile.jpg");
+		background-size: cover;
+		padding-bottom: 60px;
+	}
+	.costume-three-middle-block-price{
+		margin-bottom: 60px;
+	}
+	.title-font{
+		font-size: 35px;
+		line-height: 40px;
+	}
+	.costume-three-middle-block-price{
+		font-size: 30px;
+		line-height: 35px;
+	}
+	.costume-three-middle-block-btn{
+		max-width: 200px;
+		height: 50px;
+	}
+	.costume-three-head-block-phone{
+		font-size: 18px;
+		line-height: 22px;
+	}
+	.costume-three-head-block-logo img{
+		max-width: 150px;
+		width: 100%;
+	}
+	.tailoring-block{
+		flex-direction: column-reverse;
+		align-items: center;
+		justify-content: center;
+	}
+	.tailoring-left-content{
+		padding-top: 30px;
+	}
+	.tailoring-right-content{
+		max-width: none;
+		padding-top: 30px;
+	}
+	.tailoring-left-content-text{
+		top: 84%;
+		margin-right: 15px;
+		font-size: 22px;
+		line-height: 30px;
+	}
+	.tailoring-right-content-title br{
+		display: none;
+	}
+	.tailoring-right-content-title{
+		margin-bottom: 30px;
+	}
+	.advantages-costume-img{
+		position: static;
+	}
+	.advantages-block{
+		display: flex;
+		justify-content: space-between;
+		gap: 10px;
+	}
+	.advantages-item:nth-child(2){
+		align-self: flex-start;
+		margin-bottom: 0px;
+	}
+	.advantages-item:nth-child(3){
+		margin-bottom: 0px;
+	}
+	.advantages-item:nth-child(4){
+		align-self: flex-start;
+	}
+	.advantages-items{
+		gap: 15px;
+	}
+	.advantages-item-bg{
+		padding: 0px;
+		background: none;
+		border-radius: 0px;
+		gap: 30px;
+		max-width: none;
+	}
+	.wedding-costume-advantages{
+		background-position: left top;
+		background-size: auto;
+		padding-top: 0px;
+		margin-bottom: 15px;
+	}
+	.advantages-costume-img img{
+		height: 600px;
+	}
+	.advantages-item-bg span{
+		max-width: 260px;
+	}
+	.wedding-costume-tailoring{
+		margin: 0 auto 30px auto;
+	}
+	.costume-services-text{
+		font-size: 20px;
+		line-height: 24px;
+		margin-bottom: 30px;
+	}
+	.costume-services-text p:not(:last-child){
+		margin-bottom: 20px;
+	}
+	.costume-services-content{
+		max-width: none;
+		transform: translate(0px, 0px);
+	}
+	.wedding-costume-services{
+		background: none;
+		margin: 0 auto 30px auto;
+		padding-bottom: 0px;
+	}
+	.better-title{
+		margin-bottom: 30px;
+	}
+	.wedding-costume-better{
+		margin: 0 auto 30px auto;
+	}
+	.offer-img,
+	.offer-item,
+	.offer-img img{
+		max-width: 250px;
+	}
+	.offer-sub-title::before {
+		display: none;
+	}
+	.offer-items{
+		gap: 20px;
+	}
+	.offer-sub-title{
+		font-size: 20px;
+		line-height: 24px;
+	}
+	.offer-img{
+		margin-bottom: 10px;
+	}
+	.offer-title{
+		margin-bottom: 30px;
+	}
+	.offer-content{
+		gap: 30px;
+	}
+	.wedding-costume-offer {
+		margin: 0px auto 30px auto;
+	}
+	.wedding-costume-portfolio{
+		padding-bottom: 55px;
+	}
+	.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+		bottom: -35px;
+	}
+	.portfolio-title{
+		padding-top: 30px;
+		margin-bottom: 20px;
+	}
+	.portfolio-content .swiper-button-prev,
+	.portfolio-content .swiper-button-next,
+	.reviews-content .swiper-button-prev,
+	.reviews-content .swiper-button-next{
+		width: 40px;
+		height: 40px;
+		background-size: contain;
+	}
+	.wedding-costume-portfolio{
+		margin: 0 auto 30px auto;
+	}
+	.elite-block-left img {
+		max-width: 300px;
+	}
+	.elite-block-right-text{
+		max-width: 350px;
+		font-size: 18px;
+		line-height: 28px;
+		margin-bottom: 30px;
+	}
+	.elite-block-right-img img{
+		max-width: 350px;
+	}
+	.wedding-costume-elite {
+		margin: 0 auto 30px auto;
+	}
+	.wedding-costume-client {
+		margin: 0 auto 30px auto;
+	}
+	.client-item:nth-child(2){
+		transform: translate(0px, 0px);
+	}
+	.client-item:nth-child(3){
+		transform: translate(0px, 0px);
+	}
+	.client-item:nth-child(4){
+		transform: translate(0px, 0px);
+	}
+	.client-items{
+		margin-bottom: 30px;
+	}
+	.client-item img{
+		max-width: 170px;
+	}
+	.client-bottom-block-text{
+		padding-left: 0px;
+		font-size: 20px;
+		line-height: 24px;
+	}
+	.client-bottom-block-btn{
+		font-size: 20px;
+		line-height: 24px;
+		max-width: 420px;
+	}
+	.wedding-costume-client{
+		background-size: cover;
+	}
+	.client-title{
+		margin-bottom: 30px;
+		color: #FFFFFF;
+		padding-top: 10px;
+	}
+	.reviews-item-author{
+		font-size: 18px;
+		line-height: 24px;
+	}
+	.reviews-item{
+		padding: 30px 30px 30px 60px;
+	}
+	.reviews-content{
+		margin-bottom: 30px;
+	}
+	.wedding-costume-reviews {
+		margin: 0 auto 30px auto;
+	}
+	.map-content {
+		height: 500px;
+	}
+	.map-info-block {
+		top: 115px;
+		right: 50px;
+	}
+	.map-info-block-logo img{
+		max-width: 120px;
+		width: 100%;
+	}
+	.map-info-block-logo{
+		margin-bottom: 15px;
+	}
+	.map-info-block-title{
+		font-size: 18px;
+		line-height: 22px;
+	}
+	.map-info-block-sub-title{
+		font-size: 16px;
+		line-height: 20px;
+	}
+	.map-info-block-item:not(:last-child){
+		margin-bottom: 15px;
+	}
+	.map-info-block-btn{
+		width: 170px;
+		height: 50px;
+		font-size: 18px;
+		line-height: 22px;
+	}
+	.map-info-block-item:not(:last-child)::before {
+		bottom: -5px;
+	}
+	.map-title{
+		margin-bottom: 30px;
+	}
+	.client-sub-title{
+		margin-bottom: 15px;
+	}
+	.client-bottom-block{
+		gap: 15px;
+	}
+	.map-info-block-item.social-items .social-item img{
+		max-width: 30px;
+	}
+	.map-info-block-logo, .map-info-block-items {
+		margin-bottom: 15px;
+	}
+	.map-info-block {
+		padding: 20px 45px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.wedding-costume-container{
+		max-width: none;
+	}
+	.costume-three-middle-block-title {
+		max-width: 300px;
+	}
+	.costume-three-head-block-logo{
+		position: static;
+	}
+	.costume-three-head-block{
+		padding: 10px 15px 10px 15px;
+		background: #FFFFFF;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+	.costume-three-head-block-logo img{
+		max-width: 70px;
+	}
+	.tailoring-left-content-text{
+		top: 92%;
+		padding: 15px;
+		font-size: 18px;
+		line-height: 24px;
+	}
+	.tailoring-left-content-img img{
+		/* height: 400px; */
+		object-fit: contain;
+	}
+	.tailoring-left-content-text{
+		position: static;
+		border-radius: 0px;
+		margin-right: 0px;
+	}
+	.tailoring-left-content-img{
+		text-align: center;
+	}
+	.advantages-item p, .advantages-item-bg span{
+		font-size: 18px;
+		line-height: 24px;
+	}
+	.advantages-item-bg-link{
+		font-size: 18px;
+		line-height: 24px;
+	}
+	.advantages-item-bg-link{
+		max-width: 190px;
+	}
+	.advantages-item-bg-link::before {
+		top: 5px;
+	}
+	.advantages-costume-img img {
+		height: 470px;
+	}
+	.advantages-item span{
+		font-size: 30px;
+		line-height: 30px;
+	}
+	.advantages-item-bg{
+		margin-bottom: 30px;
+	}
+	.advantages-item span span{
+		font-size: 25px;
+		line-height: 25px;
+	}
+	.costume-services-btn{
+		font-size: 18px;
+		line-height: 20px;
+		max-width: 200px;
+		height: 50px;
+	}
+	.better-items{
+		gap: 10px;
+	}
+	.better-item,
+	.better-item-bg{
+		max-width: 300px;
+	}
+	.better-item-bg-content::before {
+		right: 25px;
+	}
+	.better-item-title{
+		margin-bottom: 20px;
+		font-size: 22px;
+		line-height: 24px;
+	}
+	.costume-three-middle-block-price br{
+		display: block;
+	}
+	.wedding-costume-portfolio .wedding-costume-container{
+		padding-right: 0px;
+	}
+	.portfolio-btn{
+		padding-right: 15px;
+	}
+	.elite-block-right-img img{
+		width: 100%;
+		max-width: none;
+	}
+	.elite-block-left{
+		display: none;
+	}
+	.elite-block-right-text{
+		max-width: none;
+	}
+	.client-title{
+		text-align: center;
+	}
+	.client-bottom-block-btn{
+		max-width: 300px;
+		text-align: center;
+	}
+	.client-item img{
+		max-width: 130px;
+	}
+	.client-sub-title,
+	.client-bottom-block-text{
+		text-align: center;
+	}
+	.client-bottom-block{
+		justify-content: center;
+	}
+	.client-items{
+		justify-content: center;
+	}
+	.map-info-block {
+		right: 105px;
+		padding: 9px 20px;
+	}
+	.costume-three-head-block-menu{
+		display: none;
+	}
+	.costume-three-title-block{
+		padding-top: 100px;
+		margin-top: 70px;
+	}
+}
+@media screen and (max-width: 690px) {
+	.map-info-block{
+		position: static;
+	}
+	.map-content {
+		height: 300px;
+	}
+	.map-info-block-item.social-items{
+		text-align: center;
+	}
+}
+@media screen and (max-width: 640px) {
+	.better-items{
+		flex-direction: column;
+	}
+	.better-item, 
+	.better-item-bg{
+		max-width: none;
+	}
+	.better-item-bg::before{
+		background-size: cover;
+	}
+	.better-item-bg-content::before{
+		height: 20px;
+		width: 10px;
+		top: 33px;
+	}
+}
+@media screen and (max-width: 570px) {
+	.offer-img,
+	.offer-item,
+	.offer-img img{
+		max-width: 200px;
+	}
+	.portfolio-block{
+		max-width: 360px;
+		margin: 0 auto;
+	}
+	.wedding-costume-portfolio .wedding-costume-container{
+		padding-right: 15px;
+	}
+	.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+		left: 0;
+	}
+	.form-order {
+		max-width: 370px;
+		padding: 30px;
+	}
+}
+@media screen and (max-width: 520px) {
+	.advantages-item-bg-link {
+		font-size: 16px;
+		line-height: 22px;
+		max-width: 100px;
+	}
+}
+@media screen and (max-width: 479px) {
+	.costume-three-title-block {
+		background-position: -100px;
+	}
+	.advantages-item span{
+		font-size: 25px;
+		line-height: 25px;
+	}
+	.advantages-item p, .advantages-item-bg span{
+		font-size: 16px;
+		line-height: 22px;
+	}
+	.advantages-item span span{
+		font-size: 20px;
+		line-height: 20px;
+	}
+	.advantages-costume-img img {
+		height: 350px;
+	}
+	.advantages-block{
+		flex-direction: column;
+		align-items: center;
+	}
+	.advantages-item:nth-child(1){
+		align-self: inherit;
+	}
+	.advantages-item:nth-child(2){
+		align-self: inherit;
+	}
+	.advantages-item:nth-child(3){
+		align-self: inherit;
+	}
+	.advantages-item:nth-child(4){
+		align-self: inherit;
+	}
+	.advantages-item-bg{
+		margin-bottom: 0px;
+	}
+	.advantages-item{
+		align-items: center;
+	}
+	.advantages-item br{
+		display: none;
+	}
+	.advantages-item-bg{
+		text-align: center;
+		align-items: center;
+	}
+	.costume-services-content{
+		padding: 25px;
+	}
+	.costume-services-text{
+		font-size: 18px;
+		line-height: 22px;
+	}
+	.costume-services-title{
+		margin-bottom: 25px;
+	}
+	.better-item-bg-text {
+		padding: 30px 39px 30px 39px;
+	}
+	.offer-img,
+	.offer-item,
+	.offer-img img{
+		max-width: 170px;
+	}
+	.offer-content{
+		gap: 10px;
+	}
+	.form-order-title{
+		font-size: 20px;
+		line-height: 24px;
+	}
+	.form-order{
+		height: 100%;
+		overflow: auto;
+	}
+}
+@media screen and (max-width: 400px) {
+	.costume-three-head-block{
+		margin-bottom: 20px;
+	}
+	.costume-services-text{
+		font-size: 16px;
+	}
+	.costume-services-title{
+		font-size: 30px;
+		text-align: center;
+	}
+	.costume-services-content::after {
+		right: -175px;
+	}
+	.better-item-bg-content::before {
+		top: 45px;
+	}
+	.offer-img,
+	.offer-item,
+	.offer-img img{
+		max-width: 280px;
+	}
+	.wedding-costume-portfolio{
+		background-size: cover;
+	}
+	.reviews-item::before {
+		height: 25px;
+		width: 25px;
+	}
+	.offer-items,
+	.offer-content{
+		gap: 30px;
+	}
+	.costume-three-title-block {
+		padding-top: 55px;
+	}
+	.social-item img{
+		max-width: 30px;
+	}
+}
+@media screen and (max-width: 340px) {
+	.costume-three-head-block-phone{
+		font-size: 16px;
+	}
+}
